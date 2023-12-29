@@ -225,7 +225,7 @@
 
       "/remove_employee/{id}": {
         "delete": {
-          "summary": "Delete Employee by ID",
+          "summary": "Delete employee by ID",
           "tags": ["Basic Operations"],
           "parameters": [
             {
