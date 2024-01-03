@@ -3,7 +3,7 @@ import requests
 
 class ApiTests(unittest.TestCase):
     BASE_URL = "http://127.0.0.1:5000/"
-    VALID_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwNDE3NzkyNCwianRpIjoiNDUyODkyMDEtOWU0ZS00ZDQ3LWE3NDYtYTAxOWFkZGNlNTZhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6InN0cmluZzEiLCJuYmYiOjE3MDQxNzc5MjQsImNzcmYiOiI4YTdjNjQzMy01MDJiLTQ2N2EtYjU5MC0zMTJmYTYwNmE4N2MiLCJleHAiOjE3MDQxNzg4MjR9.5NkI70K-ikWptXShhR5cWZoG8NUpQ3ZHb3XrvLxihu0"
+    VALID_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwNDI1NjI4NCwianRpIjoiODE2ODNkMmItM2RkYS00MzYxLWE0OGEtMmJiNTQ2ZjcwOTA1IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6InN0cmluZzEiLCJuYmYiOjE3MDQyNTYyODQsImNzcmYiOiIyYmQ4YTE4NC05MjFkLTRhZDgtOTBkZS0zYjUwNWYxMjk4YmQiLCJleHAiOjE3MDQyNTcxODR9.riGuDgyNw5ZRPYzBXiIv2Vxl6ivQp9nB_gi4Z3-SYC0"
     INVALID_TOKEN = "invalid_token"
 
     
@@ -15,7 +15,7 @@ class ApiTests(unittest.TestCase):
     "salary": "75000"
   }
 
-    #  Positive test case to get all employees with valid token
+    # Positive test case to get all employees with valid token
     def test_valid_token_get_request(self):
         headers = {
             "Authorization": f"Bearer {self.VALID_TOKEN}"
@@ -28,7 +28,7 @@ class ApiTests(unittest.TestCase):
         print("The response code is 200 OK")
         print("--------------------------------------")
 
-
+    # Positive test case to get specific employee
     def test_get_specific_employees(self):
         headers = {
             "Authorization": f"Bearer {self.VALID_TOKEN}"
@@ -36,9 +36,9 @@ class ApiTests(unittest.TestCase):
         response= requests.get(f"{self.BASE_URL}/employee/1",headers=headers)
         self.assertEqual(response.status_code,200)
         
-        # for i in response.json():
-        #     dict=i
-        # self.assertDictEqual(dict,self.expected_result)
+        for i in response.json():
+            dict=i
+        self.assertDictEqual(dict,self.expected_result)
         
         print("Positive Test 2 completed - GET Request")
         print("The response code is 200 OK")
