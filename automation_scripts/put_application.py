@@ -2,7 +2,7 @@ import requests
 
 header={
     'Accept':'*/*',
-    'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwMzgyNTEzMiwianRpIjoiMDI0MjVlNTctNzE5Yy00YzRiLWE2ZmEtZmQ1MDZjM2Q0YzNhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Ik1pY2hhZWwiLCJuYmYiOjE3MDM4MjUxMzIsImNzcmYiOiI2MmM2MWMzNy1mZTdlLTQxODQtODI3Zi1kMDM4ODU4ZGE1NmUiLCJleHAiOjE3MDM4MjYwMzJ9.Tvlid_PJEQjaHXIBnhX1XKDBukUTaNFZ537SRPTErfg'
+    'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwNjUwODU4NywianRpIjoiZGNlOWFlMGItM2Q2OC00Y2EwLTk4NDUtZGMyMDk1M2IyYTIwIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Ik1pY2hhZWwiLCJuYmYiOjE3MDY1MDg1ODcsImNzcmYiOiI5ODUxYzBjNi1jZWE4LTQ3MjEtODE3OC1jODY4MWZkMmE2YTkiLCJleHAiOjE3MDY1MDk0ODd9.mS4Bw1tqipHoJQ9dF8d0MsKf0G5HghMVKwe6twZXpag'
 }
 response= requests.get("http://127.0.0.1:5000/list_employees", headers=header)
 
@@ -16,14 +16,14 @@ for i in range(len(list)):
 headerPut={
     'Accept':'*/*',
     'Content-Type': 'application/json',
-    'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwMzgyNTEzMiwianRpIjoiMDI0MjVlNTctNzE5Yy00YzRiLWE2ZmEtZmQ1MDZjM2Q0YzNhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Ik1pY2hhZWwiLCJuYmYiOjE3MDM4MjUxMzIsImNzcmYiOiI2MmM2MWMzNy1mZTdlLTQxODQtODI3Zi1kMDM4ODU4ZGE1NmUiLCJleHAiOjE3MDM4MjYwMzJ9.Tvlid_PJEQjaHXIBnhX1XKDBukUTaNFZ537SRPTErfg'
+    'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwNjUwODU4NywianRpIjoiZGNlOWFlMGItM2Q2OC00Y2EwLTk4NDUtZGMyMDk1M2IyYTIwIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Ik1pY2hhZWwiLCJuYmYiOjE3MDY1MDg1ODcsImNzcmYiOiI5ODUxYzBjNi1jZWE4LTQ3MjEtODE3OC1jODY4MWZkMmE2YTkiLCJleHAiOjE3MDY1MDk0ODd9.mS4Bw1tqipHoJQ9dF8d0MsKf0G5HghMVKwe6twZXpag'
 }
 
 putPayload={
         "address": "Kadri",
         "city": "Mangalore",
         "name": "Manoj",
-        "salary": "92000"
+        "salary": "44000"
 }
 
 responsePut= requests.put("http://127.0.0.1:5000/update_employee/6",headers=headerPut,json=putPayload)

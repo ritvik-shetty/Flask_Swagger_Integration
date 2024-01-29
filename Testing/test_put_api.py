@@ -3,7 +3,7 @@ import requests
 
 class ApiTests(unittest.TestCase):
     URL="http://127.0.0.1:5000/update_employee"
-    VALID_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwNDE3OTMyOCwianRpIjoiMzNkYjZlYjYtMWI1Zi00MTFlLWJhMGMtYjgzNWU1NmFlZmFmIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6InN0cmluZzEiLCJuYmYiOjE3MDQxNzkzMjgsImNzcmYiOiIwMTBhMzY2OS1kMDEzLTRkZmEtYjE3OC1kMzBlNDA4YWJkYTgiLCJleHAiOjE3MDQxODAyMjh9.wYWU8p4c4EzAiWK-zAMXkeEKoGqdD8E5pucfvYQEn2s"
+    VALID_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwNjUwODU4NywianRpIjoiZGNlOWFlMGItM2Q2OC00Y2EwLTk4NDUtZGMyMDk1M2IyYTIwIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Ik1pY2hhZWwiLCJuYmYiOjE3MDY1MDg1ODcsImNzcmYiOiI5ODUxYzBjNi1jZWE4LTQ3MjEtODE3OC1jODY4MWZkMmE2YTkiLCJleHAiOjE3MDY1MDk0ODd9.mS4Bw1tqipHoJQ9dF8d0MsKf0G5HghMVKwe6twZXpag"
     INVALID_TOKEN = "invalid_token"
 
     data={        
@@ -91,7 +91,7 @@ class ApiTests(unittest.TestCase):
 
 if __name__ == '__main__':
     tester=ApiTests()
-    # tester.test_successful_put()
+    tester.test_successful_put()
 
     tester.test_put_invalid_token()
     tester.test_put_nonexisting_id()

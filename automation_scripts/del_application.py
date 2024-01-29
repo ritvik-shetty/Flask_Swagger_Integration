@@ -2,7 +2,7 @@ import requests
 
 header={
     'Accept':'*/*',
-    'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwMzgyNTEzMiwianRpIjoiMDI0MjVlNTctNzE5Yy00YzRiLWE2ZmEtZmQ1MDZjM2Q0YzNhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Ik1pY2hhZWwiLCJuYmYiOjE3MDM4MjUxMzIsImNzcmYiOiI2MmM2MWMzNy1mZTdlLTQxODQtODI3Zi1kMDM4ODU4ZGE1NmUiLCJleHAiOjE3MDM4MjYwMzJ9.Tvlid_PJEQjaHXIBnhX1XKDBukUTaNFZ537SRPTErfg'
+    'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwNjUwODU4NywianRpIjoiZGNlOWFlMGItM2Q2OC00Y2EwLTk4NDUtZGMyMDk1M2IyYTIwIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Ik1pY2hhZWwiLCJuYmYiOjE3MDY1MDg1ODcsImNzcmYiOiI5ODUxYzBjNi1jZWE4LTQ3MjEtODE3OC1jODY4MWZkMmE2YTkiLCJleHAiOjE3MDY1MDk0ODd9.mS4Bw1tqipHoJQ9dF8d0MsKf0G5HghMVKwe6twZXpag'
 }
 
 response = requests.get("http://127.0.0.1:5000/list_employees", headers=header)
@@ -17,11 +17,11 @@ for i in range(len(list)):
 
 headDel={
     'Accept': '*/*',
-    'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwMzgyNTEzMiwianRpIjoiMDI0MjVlNTctNzE5Yy00YzRiLWE2ZmEtZmQ1MDZjM2Q0YzNhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Ik1pY2hhZWwiLCJuYmYiOjE3MDM4MjUxMzIsImNzcmYiOiI2MmM2MWMzNy1mZTdlLTQxODQtODI3Zi1kMDM4ODU4ZGE1NmUiLCJleHAiOjE3MDM4MjYwMzJ9.Tvlid_PJEQjaHXIBnhX1XKDBukUTaNFZ537SRPTErfg'
+    'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwNjUwODU4NywianRpIjoiZGNlOWFlMGItM2Q2OC00Y2EwLTk4NDUtZGMyMDk1M2IyYTIwIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Ik1pY2hhZWwiLCJuYmYiOjE3MDY1MDg1ODcsImNzcmYiOiI5ODUxYzBjNi1jZWE4LTQ3MjEtODE3OC1jODY4MWZkMmE2YTkiLCJleHAiOjE3MDY1MDk0ODd9.mS4Bw1tqipHoJQ9dF8d0MsKf0G5HghMVKwe6twZXpag'
 
 }
 
-responseDel= requests.delete("http://127.0.0.1:5000/employee/7",headers=headDel)
+responseDel= requests.delete("http://127.0.0.1:5000/remove_employee/7",headers=headDel)
 assert response.status_code==200 , f"expected response to have status code 200 but got {response.status_code}"
 print("Deleted Successfull with response code",responseDel.status_code)
 

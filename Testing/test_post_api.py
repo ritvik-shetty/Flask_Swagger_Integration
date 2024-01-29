@@ -3,7 +3,7 @@ import requests
 
 class ApiTests(unittest.TestCase):
     BASE_URL = "http://127.0.0.1:5000/"
-    VALID_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwNDE3ODg4MiwianRpIjoiNTU3M2NhNjUtMzc5Yy00MjI0LTlhODktMDRmYmUzYzViOGE0IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6InN0cmluZzEiLCJuYmYiOjE3MDQxNzg4ODIsImNzcmYiOiIzMzU1YzFkNC0wNTlhLTQ5MzYtYWQ2ZS00M2I5MjQzNTA3NGEiLCJleHAiOjE3MDQxNzk3ODJ9.Zfi1aprvgSwDPbKdEuTuRIgR8lxY0qecGOGBnr-DvaY"
+    VALID_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwNjUwOTAxMiwianRpIjoiMWViOWViZjMtYTBiMi00ODZjLWE4MjEtMzE5OWEwMGI5ZGJlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Ik1pY2hhZWwiLCJuYmYiOjE3MDY1MDkwMTIsImNzcmYiOiIwYmFjMjg0MC1kMzM0LTRlMzQtOTI0Mi00YzM1Yjc5Mjc0Y2YiLCJleHAiOjE3MDY1MDk5MTJ9.sZelZbmkH5aBZWh2R4kyq9Dr8bQdMWx5Lfe2odbLkvg"
     INVALID_TOKEN = "invalid_token"
 
     
@@ -11,7 +11,7 @@ class ApiTests(unittest.TestCase):
         "name": "Karthik",
         "address": "kundapura-street",
         "city": "udupi",
-        "salary": "97765"
+        "salary": "344344"
     }
 
     # Positive test case 1: Ensure successful creation of data with valid token
